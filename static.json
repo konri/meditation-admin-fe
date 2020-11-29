@@ -1,0 +1,11 @@
+{
+  "root": "build/",
+  "routes": {
+    "/**": "index.html"
+  },
+  "proxies": {
+    "/relocode/": {
+      "origin": "${API_URL}"
+    }
+  }
+}
