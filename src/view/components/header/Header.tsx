@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import logo from '../../../assets/logo.svg'
-import logoDarkMode from '../../../assets/logo-dark-mode.svg'
+import logo from '@svg/logo.svg'
+import logoDarkMode from '@svg/logo-dark-mode.svg'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import AppMenu from './Menu'
