@@ -12,15 +12,9 @@ import CountryComponent from '../../../shared/tableComponents/CountryComponent'
 import ButtonWithLinkComponent from '../../../shared/tableComponents/ButtonWithLinkComponent'
 import ListComponent from '../../../shared/tableComponents/ListComponent'
 import CountriesListComponent from '../../../shared/tableComponents/CountriesListComponent'
+import { Title } from '../../components/styled-components/Title'
 
 interface IProps {}
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #2185d0;
-  font-weight: bold;
-`
 
 const columns: Array<MaterialColumn<UserProfileDetails>> = [
   { title: 'Name', field: 'firstName', width: 100 },

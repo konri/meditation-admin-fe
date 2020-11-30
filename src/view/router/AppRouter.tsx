@@ -13,6 +13,7 @@ import RouteEnum from './RouteEnum'
 import LogoutRoute from '../../shared/settings/router/LogoutRoute'
 import Footer from '../components/Footer'
 import styled from 'styled-components'
+import { HomePage } from '../pages/HomePage/HomePage'
 
 function Loading() {
   return (
@@ -49,7 +50,7 @@ function AppRouter() {
             <PrivateRoute
               path={RouteEnum.Home}
               exact
-              component={DashboardPage}
+              component={HomePage}
               redirect={RouteEnum.Login}
               role={UserRoles.NARRATOR}
             />

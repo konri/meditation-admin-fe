@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../../../assets/logo.svg'
 import logo from '../../../assets/logo.svg'
 import logoDarkMode from '../../../assets/logo-dark-mode.svg'
 import styled from 'styled-components'
