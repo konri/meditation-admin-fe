@@ -15,9 +15,9 @@ const StickyContainer = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.headerBackground};
   z-index: 1000;
-  -webkit-box-shadow: 0px 8px 30px -11px ${({ theme }) => theme.headerShadowColor};
-  -moz-box-shadow: 0px 8px 30px -11px ${({ theme }) => theme.headerShadowColor};
-  box-shadow: 0px 8px 30px -11px ${({ theme }) => theme.headerShadowColor};
+  -webkit-box-shadow: 0px 8px 20px -11px ${({ theme }) => theme.headerShadowColor};
+  -moz-box-shadow: 0px 8px 20px -11px ${({ theme }) => theme.headerShadowColor};
+  box-shadow: 0px 8px 20px -11px ${({ theme }) => theme.headerShadowColor};
 `
 
 const LogoContainer = styled.button`
