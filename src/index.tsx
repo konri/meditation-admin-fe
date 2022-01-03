@@ -10,18 +10,46 @@ import { Provider } from 'react-redux'
 import reduxThunk from 'redux-thunk'
 import reducers from './store/rootReducer'
 
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from '@apollo/client'
+import { setContext } from '@apollo/client/link/context'
+
 import App from './view/pages/MainPage/App'
 import * as serviceWorker from './serviceWorker'
+import './translations'
 import setupAxiosInterceptors from './shared/settings/interceptor'
+import { getToken } from './store/auth/authService'
 
 // @ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(reducers, composeEnhancers(applyMiddleware(reduxThunk)))
 setupAxiosInterceptors(store)
 
+const httpLink = createHttpLink({
+  uri: 'http://localhost:4000/graphql',
+})
+
+const authLink = setContext(async (_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const accessToken = getToken()
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: accessToken ? `${accessToken}` : '',
+    },
+  }
+})
+
+export const apolloClient = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+})
+
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ApolloProvider client={apolloClient}>
+      <App />
+    </ApolloProvider>
   </Provider>,
   document.getElementById('root')
 )

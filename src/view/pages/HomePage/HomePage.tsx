@@ -6,6 +6,8 @@ import narratorDetails from '@svg/narrator-details.svg'
 import { Card } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
 
 const ImageContainer = styled.div`
   background: #fff;
@@ -24,9 +26,12 @@ const CardDescription = styled.div`
 
 const imageStyle = { maxHeight: '300px' }
 export const HomePage = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100 mt-4">
-      <Title>Home dashboard</Title>
+      <Title>{t('HomePage.title')}</Title>
+      <button onClick={() => i18next.changeLanguage('pl')}>PL</button>
       <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5">
         <Card.Group>
           <Link to={'/create-story'} className="p-2">

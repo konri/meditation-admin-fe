@@ -5,6 +5,8 @@ import axios, { AxiosRequestConfig } from 'axios'
 
 const CACHED_USER_ID = 'u$er_details'
 
+let token: string
+
 export function getInitialState(): AuthState {
   const cachedUser = localStorage.getItem(CACHED_USER_ID)
   if (cachedUser) {
@@ -34,6 +36,19 @@ export function parseResponseToPayload(authRes: AuthResponse): AuthSuccessPayloa
 
 export function saveUserToCache(userCached: AuthSuccessPayload) {
   localStorage.setItem(CACHED_USER_ID, JSON.stringify(userCached))
+}
+
+export function getToken(): string | null {
+  if (token) {
+    return token
+  }
+  const cachedUser = localStorage.getItem(CACHED_USER_ID)
+  if (cachedUser) {
+    const userDetails: AuthSuccessPayload = JSON.parse(cachedUser)
+    token = userDetails.token
+    return token
+  }
+  return null
 }
 
 export function deleteUserFromCache() {

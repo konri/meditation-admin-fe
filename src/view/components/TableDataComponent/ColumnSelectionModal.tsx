@@ -3,10 +3,11 @@ import { Modal } from 'react-bootstrap'
 import { Button, Checkbox, List } from 'semantic-ui-react'
 import { MaterialColumn } from '../../../shared/model/MaterialColumn'
 import { UserProfileDetails } from '../../pages/DashboardPage/model/UserProfileDetails'
+import { useTranslation } from 'react-i18next'
 
 export interface ColumnSelectionModal {
   open: boolean
-  columns: Array<MaterialColumn<UserProfileDetails>>
+  columns: Array<MaterialColumn<any>>
   selectedColumns: Array<string>
   close: (selectedColumns?: Array<string>) => any
 }
@@ -19,6 +20,7 @@ function createMapFromSelectedColumns(
 }
 
 export default function ColumnSelectionModal({ open, close, columns, selectedColumns }: ColumnSelectionModal) {
+  const { t } = useTranslation()
   const [listSelected, setListSelected] = useState<Map<string, boolean>>(
     createMapFromSelectedColumns(columns, selectedColumns)
   )
@@ -32,7 +34,7 @@ export default function ColumnSelectionModal({ open, close, columns, selectedCol
     setListSelected(new Map(listSelected.set(itemId, !actualState)))
   }
 
-  const togglesList = columns.map((col) => (
+  const togglesList = columns.map((col: any) => (
     <List.Item key={col.field}>
       <div className="d-flex flex-row">
         <Checkbox
@@ -41,7 +43,7 @@ export default function ColumnSelectionModal({ open, close, columns, selectedCol
           onChange={() => toggleOnChange(col.field as string)}
         />
         <List.Content className="ml-2">
-          <List.Header as="a">{col.title}</List.Header>
+          <List.Header as="a">{t(`stories.${col.field}`)}</List.Header>
         </List.Content>
       </div>
     </List.Item>
@@ -58,7 +60,7 @@ export default function ColumnSelectionModal({ open, close, columns, selectedCol
   return (
     <Modal show={open} onHide={() => closeModal()} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Select column visibility</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">{t('storyPage.modalVisibilityTitle')}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <List divided verticalAlign="middle">
@@ -66,9 +68,9 @@ export default function ColumnSelectionModal({ open, close, columns, selectedCol
         </List>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={() => closeModal()}>Close</Button>
+        <Button onClick={() => closeModal()}>{t('modal.cancel')}</Button>
         <Button positive onClick={() => closeModal(true)}>
-          Confirm
+          {t('modal.confirm')}
         </Button>
       </Modal.Footer>
     </Modal>

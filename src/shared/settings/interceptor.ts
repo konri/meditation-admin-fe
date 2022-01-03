@@ -4,8 +4,9 @@ import { toast } from 'react-toastify'
 import { Auth } from './endpoints'
 import { Store } from '../../store/rootReducer'
 
-axios.defaults.baseURL = `http://localhost:4000/`
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_API
 
+console.log(process.env.REACT_APP_BACKEND_API)
 const setupAxiosInterceptors = (store: any) => {
   const { dispatch } = store
   axios.interceptors.request.use(function (config) {

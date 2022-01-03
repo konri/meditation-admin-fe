@@ -14,6 +14,7 @@ import LogoutRoute from '../../shared/settings/router/LogoutRoute'
 import Footer from '../components/Footer'
 import styled from 'styled-components'
 import { HomePage } from '../pages/HomePage/HomePage'
+import StoriesDetailsPage from '../pages/StoriesDetailsPage/StoriesDetailsPage'
 
 function Loading() {
   return (
@@ -54,7 +55,22 @@ function AppRouter() {
               redirect={RouteEnum.Login}
               role={UserRoles.NARRATOR}
             />
+            <PrivateRoute
+              path={RouteEnum.Stories}
+              exact
+              component={StoriesDetailsPage}
+              redirect={RouteEnum.Login}
+              role={UserRoles.NARRATOR}
+            />
             <LogoutRoute exact path={RouteEnum.Logout} redirect={RouteEnum.Login} />
+
+            <PrivateRoute
+              path={RouteEnum.Main}
+              exact
+              component={HomePage}
+              redirect={RouteEnum.Login}
+              role={UserRoles.NARRATOR}
+            />
             <Route component={NotFoundPage} />
           </Switch>
         </RouterContainer>

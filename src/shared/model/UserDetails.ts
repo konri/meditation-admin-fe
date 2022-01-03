@@ -1,10 +1,10 @@
 import { UserRoles } from './UserRoles'
 
 export interface UserDetails {
-  userName: string
-  lastName: string
+  name: string
+  firstName: string
+  secondName: string
   email: string
-  imageUrl: string
+  picture: string
   role: UserRoles
-  profileCompleted: boolean
 }

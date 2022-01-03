@@ -32,7 +32,7 @@ export const LoginRequest = (loginRequest: LoginFormData) => async (dispatch: an
 
     dispatch(success(authSuccessPayload))
 
-    history.push(RouteEnum.Dashboard)
+    history.push(RouteEnum.Home)
   } catch (error) {
     const { response } = error as AxiosError
     dispatch({
@@ -47,9 +47,10 @@ export const Logout = () => (dispatch: any) => {
   dispatch({ type: AuthActionTypes.LOGOUT })
 }
 
-function success(
+function success(payload: AuthSuccessPayload): {
+  type: AuthActionTypes.LOGIN_REGISTER_SUCCESSFUL
   payload: AuthSuccessPayload
-): { type: AuthActionTypes.LOGIN_REGISTER_SUCCESSFUL; payload: AuthSuccessPayload } {
+} {
   return {
     type: AuthActionTypes.LOGIN_REGISTER_SUCCESSFUL,
     payload,

@@ -40,7 +40,7 @@ const styles = {
 
 function CookiePopup() {
   const message =
-    "Relocode uses cookies to guarantee users the employment of its site features, offering a better purchasing experience. By continuing to browse the site you're agreeing to our use of cookies."
+    "Quietly uses cookies to guarantee users the employment of its site features, offering a better purchasing experience. By continuing to browse the site you're agreeing to our use of cookies."
 
   return (
     <div style={{ position: 'fixed', bottom: 0, zIndex: 1000 }}>

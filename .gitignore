@@ -6,3 +6,5 @@ dist
 /prisma/migrations
 schema.gql
 .eslintcache
+
+yarn-error.log
