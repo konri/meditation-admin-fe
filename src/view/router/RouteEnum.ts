@@ -5,6 +5,8 @@ enum RouteEnum {
   Logout = '/logout',
   Dashboard = '/dashboard',
   Stories = '/stories',
+  CreateStory = '/create-story',
+  Story = '/story',
 }
 
 export default RouteEnum

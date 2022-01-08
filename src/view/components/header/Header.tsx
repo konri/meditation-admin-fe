@@ -8,6 +8,7 @@ import { DarkModeToggle } from '../DarkModeToggle'
 import { useDispatch, useSelector } from 'react-redux'
 import { useDarkMode } from '../../../store/settings/settingsSelectors'
 import { toggleDarkMode } from '../../../store/settings/settingsActions'
+import LanguageSelector from '@components/header/LanguageSelector'
 
 const StickyContainer = styled.div`
   position: fixed;
@@ -59,6 +60,10 @@ export function AppHeader() {
       </Link>
       <div className="d-flex flex-row align-items-center pr-2 pr-lg-4">
         <AppMenu />
+
+        <div className="pl-2">
+          <LanguageSelector />
+        </div>
         <div className="pl-2">
           <DarkModeToggle
             width={50}

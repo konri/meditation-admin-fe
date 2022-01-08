@@ -15,6 +15,7 @@ import Footer from '../components/Footer'
 import styled from 'styled-components'
 import { HomePage } from '../pages/HomePage/HomePage'
 import StoriesDetailsPage from '../pages/StoriesDetailsPage/StoriesDetailsPage'
+import { CreateStoryPage } from '../pages/CreateStoryPage/CreateStoryPage'
 
 function Loading() {
   return (
@@ -59,6 +60,13 @@ function AppRouter() {
               path={RouteEnum.Stories}
               exact
               component={StoriesDetailsPage}
+              redirect={RouteEnum.Login}
+              role={UserRoles.NARRATOR}
+            />
+            <PrivateRoute
+              path={RouteEnum.CreateStory}
+              exact
+              component={CreateStoryPage}
               redirect={RouteEnum.Login}
               role={UserRoles.NARRATOR}
             />
