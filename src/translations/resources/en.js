@@ -1,6 +1,16 @@
 export default {
   HomePage: {
     title: 'Home dashboard',
+    menuList: {
+      createStoryTitle: 'Create story',
+      createStoryDesc: 'Create a new story for your users.',
+
+      showStoriesTitle: 'Show stories',
+      showStoriesDesc: 'Show your created stories and check analytics.',
+
+      personalDateTitle: 'Your personal data',
+      personalDateDesc: 'Edit your personal data.',
+    },
   },
   example: {
     helloUser: 'I am a fake user, my name is {{name}}',

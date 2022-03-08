@@ -1,6 +1,14 @@
 export default {
   HomePage: {
     title: 'Strona główna',
+    menuList: {
+      createStoryTitle: 'Stwórz historyjkę',
+      createStoryDesc: 'Stwórz nową historyjkę dla użytkowników już teraz.',
+      showStoriesTitle: 'Wszystkie historyjki',
+      showStoriesDesc: 'Pokaz stworzone historyjki oraz sprawdź detale i statystyki.',
+      personalDateTitle: 'Twoje dane',
+      personalDateDesc: 'Zedytuj swoje dane widoczne dla użytkowników',
+    },
   },
   example: {
     helloUser: 'I am a fake user, my name is {{name}}',

@@ -31,7 +31,6 @@ export const HomePage = () => {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100 mt-4">
       <Title>{t('HomePage.title')}</Title>
-      <button onClick={() => i18next.changeLanguage('pl')}>PL</button>
       <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5">
         <Card.Group>
           <Link to={'/create-story'} className="p-2">
@@ -40,9 +39,9 @@ export const HomePage = () => {
                 <img src={addStory} style={imageStyle} />
               </ImageContainer>
               <Card.Content>
-                <Card.Header>Create story</Card.Header>
+                <Card.Header>{t('HomePage.menuList.createStoryTitle')}</Card.Header>
                 <CardDescription>
-                  <Card.Description>Create a new story for your users.</Card.Description>
+                  <Card.Description>{t('HomePage.menuList.createStoryDesc')}</Card.Description>
                 </CardDescription>
               </Card.Content>
             </Card>
@@ -54,9 +53,9 @@ export const HomePage = () => {
                 <img src={editStory} style={imageStyle} />
               </ImageContainer>
               <Card.Content>
-                <Card.Header>Show stories</Card.Header>
+                <Card.Header>{t('HomePage.menuList.showStoriesTitle')}</Card.Header>
                 <CardDescription>
-                  <Card.Description>Show your created stories and check analytics.</Card.Description>
+                  <Card.Description>{t('HomePage.menuList.showStoriesDesc')}</Card.Description>
                 </CardDescription>
               </Card.Content>
             </Card>
@@ -68,9 +67,9 @@ export const HomePage = () => {
                 <img src={narratorDetails} style={imageStyle} />
               </ImageContainer>
               <Card.Content>
-                <Card.Header>Your personal data</Card.Header>
+                <Card.Header>{t('HomePage.menuList.personalDateTitle')}</Card.Header>
                 <CardDescription>
-                  <Card.Description>Edit your personal data.</Card.Description>
+                  <Card.Description>{t('HomePage.menuList.personalDateDesc')}</Card.Description>
                 </CardDescription>
               </Card.Content>
             </Card>

@@ -169,6 +169,7 @@ export const slice = createSlice({
       state.form.success = false
     })
     builder.addCase(onSaveStory.fulfilled, (state, { payload }) => {
+      console.log('onSaveStory')
       return {
         form: {
           isSubmitted: false,

@@ -25,7 +25,7 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(reduxThunk)
 setupAxiosInterceptors(store)
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql',
+  uri: `${process.env.REACT_APP_API_ENDPOINT}/graphql`,
 })
 
 const authLink = setContext(async (_, { headers }) => {
