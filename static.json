@@ -4,8 +4,8 @@
     "/**": "index.html"
   },
   "proxies": {
-    "/relocode/": {
-      "origin": "${API_URL}"
+    "/authorization/": {
+      "origin": "${API_URL}/authorization"
     }
   }
 }
