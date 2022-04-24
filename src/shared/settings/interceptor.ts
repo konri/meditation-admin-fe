@@ -5,7 +5,6 @@ import { Auth } from './endpoints'
 import { Store } from '../../store/rootReducer'
 
 axios.defaults.baseURL = process.env.REACT_APP_API_ENDPOINT
-console.log(process.env.REACT_APP_API_ENDPOINT)
 const setupAxiosInterceptors = (store: any) => {
   const { dispatch } = store
   axios.interceptors.request.use(function (config) {
