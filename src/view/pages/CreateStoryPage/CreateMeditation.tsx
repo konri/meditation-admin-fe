@@ -41,8 +41,7 @@ export function CreateMeditation({ meditation, index }: CreateMeditationProps) {
       onMeditationChange({
         id: meditation.id,
         key: 'path',
-        value:
-          'https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-31172/zapsplat_public_places_art_gallery_of_nsw_int_viewing_gallery_ambience_creaky_wood_floor_people_walla_sydney_australia_32678.mp3',
+        value: audioPath,
       })
     )
     dispatch(onMeditationChange({ id: meditation.id, key: 'duration', value: details!.duration }))

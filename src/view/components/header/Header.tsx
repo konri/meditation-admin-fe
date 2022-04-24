@@ -54,8 +54,8 @@ export function AppHeader() {
     <StickyContainer className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
       <Link to="/home">
         <LogoContainer>
-          <img src={logo} alt="Logo Quietly" width="350" height="150" />
-          <img src={logoDarkMode} alt="Logo Quietly" width="350" height="150" />
+          <img src={logo} alt="Logo Medystacja" width="350" height="150" />
+          <img src={logoDarkMode} alt="Logo Medystacja" width="350" height="150" />
         </LogoContainer>
       </Link>
       <div className="d-flex flex-row align-items-center pr-2 pr-lg-4">

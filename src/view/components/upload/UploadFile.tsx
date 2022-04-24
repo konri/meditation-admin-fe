@@ -3,6 +3,7 @@ import { useDropzone } from 'react-dropzone'
 import styled from 'styled-components'
 import { AudioDetails, saveFile } from '@components/upload/UploadFile.service'
 import { useTranslation } from 'react-i18next'
+import { Dimmer, Loader } from 'semantic-ui-react'
 
 const getColor = (props: any) => {
   if (props.isDragAccept) {
@@ -67,15 +68,17 @@ export function UploadFile({ accept, onSave }: UploadFileProps) {
   const { t } = useTranslation()
 
   const [selectedFile, setSelectedFile] = useState<SelectedFile | null>()
-
+  const [loading, setLoading] = useState(false)
   const { acceptedFiles, fileRejections, getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject } =
     useDropzone({ accept, maxFiles: 1 })
 
   useEffect(() => {
     if (acceptedFiles && acceptedFiles.length === 1) {
       const file = acceptedFiles[0]
+      setLoading(true)
       saveFile(file).then((res) => {
         onSave(res.fileLocation, res.details)
+        setLoading(false)
         setSelectedFile({
           fileName: file.name,
           location: res.fileLocation,
@@ -92,6 +95,11 @@ export function UploadFile({ accept, onSave }: UploadFileProps) {
         <input {...getInputProps()} />
         <p>{t('upload.info')}</p>
       </Container>
+      {loading && (
+        <Dimmer active>
+          <Loader />
+        </Dimmer>
+      )}
       {selectedFile && (
         <SelectedFiles>
           {accept === 'image/*' && <PlaceholderImage src={selectedFile.location} />}
