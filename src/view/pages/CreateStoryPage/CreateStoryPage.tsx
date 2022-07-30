@@ -105,6 +105,8 @@ export function CreateStoryPage() {
       { key: 'stress', value: 4, text: t('hashtags.stress') },
       { key: 'self-care', value: 5, text: t('hashtags.self-care') },
       { key: 'beginers', value: 6, text: t('hashtags.beginers') },
+      { key: 'relax', value: 7, text: t('hashtags.relax') },
+      { key: 'work', value: 8, text: t('hashtags.work') },
     ],
     [t]
   )

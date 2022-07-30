@@ -112,6 +112,8 @@ export default {
     anxiety: 'anxiety',
     beginers: 'beginners',
     'self-care': 'self care',
+    relax: 'Relax',
+    work: 'Work',
   },
   Calendar: {
     days: {
