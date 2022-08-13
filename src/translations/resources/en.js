@@ -114,6 +114,7 @@ export default {
     'self-care': 'self care',
     relax: 'Relax',
     work: 'Work',
+    mother: 'for mums',
   },
   Calendar: {
     days: {

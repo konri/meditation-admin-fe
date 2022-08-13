@@ -107,6 +107,7 @@ export function CreateStoryPage() {
       { key: 'beginers', value: 6, text: t('hashtags.beginers') },
       { key: 'relax', value: 7, text: t('hashtags.relax') },
       { key: 'work', value: 8, text: t('hashtags.work') },
+      { key: 'mother', value: 9, text: t('hashtags.mother') },
     ],
     [t]
   )
