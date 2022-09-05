@@ -115,6 +115,10 @@ export default {
     relax: 'Relax',
     work: 'Work',
     mother: 'for mums',
+    development: 'Development',
+    health: 'Health',
+    relationship: 'Relationship',
+    happiness: 'Happiness',
   },
   Calendar: {
     days: {

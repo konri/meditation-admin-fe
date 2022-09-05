@@ -108,6 +108,10 @@ export function CreateStoryPage() {
       { key: 'relax', value: 7, text: t('hashtags.relax') },
       { key: 'work', value: 8, text: t('hashtags.work') },
       { key: 'mother', value: 9, text: t('hashtags.mother') },
+      { key: 'development', value: 10, text: t('hashtags.development') },
+      { key: 'health', value: 11, text: t('hashtags.health') },
+      { key: 'relationship', value: 12, text: t('hashtags.relationship') },
+      { key: 'happiness', value: 13, text: t('hashtags.happiness') },
     ],
     [t]
   )

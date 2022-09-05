@@ -114,6 +114,10 @@ export default {
     relax: 'Relaks',
     work: 'Praca',
     mother: 'Dla mam',
+    development: 'Rozwój',
+    health: 'Zdrowie',
+    relationship: 'Relacje',
+    happiness: 'Szczęscie',
   },
   Calendar: {
     days: {
