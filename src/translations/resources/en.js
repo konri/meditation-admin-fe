@@ -119,6 +119,7 @@ export default {
     health: 'Health',
     relationship: 'Relationship',
     happiness: 'Happiness',
+    kids: 'For kids',
   },
   Calendar: {
     days: {

@@ -111,7 +111,8 @@ export function CreateStoryPage() {
       { key: 'development', value: 10, text: t('hashtags.development') },
       { key: 'health', value: 11, text: t('hashtags.health') },
       { key: 'relationship', value: 12, text: t('hashtags.relationship') },
-      { key: 'happiness', value: 13, text: t('hashtags.happiness') },
+      { key: 'kids', value: 13, text: t('hashtags.kids') },
+      { key: 'happiness', value: 14, text: t('hashtags.happiness') },
     ],
     [t]
   )
