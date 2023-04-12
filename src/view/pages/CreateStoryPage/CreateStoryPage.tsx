@@ -99,10 +99,10 @@ export function CreateStoryPage() {
 
   const storyHashTagsOptions = useMemo(
     () => [
-      { key: 'anxiety', value: 1, text: t('hashtags.anxiety') },
+      { key: 'stress', value: 1, text: t('hashtags.stress') },
       { key: 'sleep', value: 2, text: t('hashtags.sleep') },
-      { key: 'focus', value: 3, text: t('hashtags.focus') },
-      { key: 'stress', value: 4, text: t('hashtags.stress') },
+      { key: 'anxiety', value: 3, text: t('hashtags.anxiety') },
+      { key: 'focus', value: 4, text: t('hashtags.focus') },
       { key: 'self-care', value: 5, text: t('hashtags.self-care') },
       { key: 'beginers', value: 6, text: t('hashtags.beginers') },
       { key: 'relax', value: 7, text: t('hashtags.relax') },
@@ -110,9 +110,9 @@ export function CreateStoryPage() {
       { key: 'mother', value: 9, text: t('hashtags.mother') },
       { key: 'development', value: 10, text: t('hashtags.development') },
       { key: 'health', value: 11, text: t('hashtags.health') },
-      { key: 'relationship', value: 12, text: t('hashtags.relationship') },
       { key: 'kids', value: 13, text: t('hashtags.kids') },
-      { key: 'happiness', value: 14, text: t('hashtags.happiness') },
+      // { key: 'relationship', value: 12, text: t('hashtags.relationship') },
+      // { key: 'happiness', value: 14, text: t('hashtags.happiness') },
     ],
     [t]
   )
