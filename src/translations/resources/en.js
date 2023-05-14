@@ -120,6 +120,7 @@ export default {
     relationship: 'Relationship',
     happiness: 'Happiness',
     kids: 'For kids',
+    program: 'Program',
   },
   Calendar: {
     days: {

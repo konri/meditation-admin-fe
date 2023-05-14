@@ -62,13 +62,12 @@ const initialState: CreateStoryState = {
 }
 
 function checkFormCorrectness(story: Story) {
-  const { title, description, type, language, storyHashtagIds, photo, meditations } = story
+  const { title, description, type, language, photo, meditations } = story
   if (
     title.length === 0 ||
     description.length === 0 ||
     type.length === 0 ||
     language.length === 0 ||
-    storyHashtagIds.length === 0 ||
     photo.length === 0 ||
     meditations.length === 0
   ) {

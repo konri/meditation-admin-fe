@@ -2,6 +2,7 @@ node_modules
 .idea
 package-lock.json
 dist
+build
 .DS_Store
 /prisma/migrations
 schema.gql

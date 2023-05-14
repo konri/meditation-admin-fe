@@ -119,6 +119,7 @@ export default {
     relationship: 'Relacje',
     happiness: 'Szczęscie',
     kids: 'Dla dzieci',
+    program: 'Program',
   },
   Calendar: {
     days: {
