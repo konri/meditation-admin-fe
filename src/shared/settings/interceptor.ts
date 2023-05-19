@@ -3,8 +3,9 @@ import { Logout } from '../../store/auth/authActions'
 import { toast } from 'react-toastify'
 import { Auth } from './endpoints'
 import { Store } from '../../store/rootReducer'
+import { APP_CONFIG } from '../../config'
 
-axios.defaults.baseURL = process.env.REACT_APP_API_ENDPOINT
+axios.defaults.baseURL = APP_CONFIG.API
 const setupAxiosInterceptors = (store: any) => {
   const { dispatch } = store
   axios.interceptors.request.use(function (config) {

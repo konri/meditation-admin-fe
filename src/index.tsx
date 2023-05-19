@@ -18,6 +18,7 @@ import * as serviceWorker from './serviceWorker'
 import './translations'
 import setupAxiosInterceptors from './shared/settings/interceptor'
 import { getToken } from './store/auth/authService'
+import { APP_CONFIG } from './config'
 
 // @ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -25,7 +26,7 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(reduxThunk)
 setupAxiosInterceptors(store)
 
 const httpLink = createHttpLink({
-  uri: `${process.env.REACT_APP_API_ENDPOINT}/graphql`,
+  uri: `${APP_CONFIG.API}/graphql`,
 })
 
 const authLink = setContext(async (_, { headers }) => {
