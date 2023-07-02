@@ -1,5 +1,5 @@
 import { Dimmer, Loader } from 'semantic-ui-react'
-import { Route, Router, Switch } from 'react-router-dom'
+import { Route, HashRouter as Router, Switch } from 'react-router-dom'
 import React, { Suspense } from 'react'
 import LoginPage from '../pages/LoginPage/LoginPage'
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage'
@@ -16,6 +16,7 @@ import styled from 'styled-components'
 import { HomePage } from '../pages/HomePage/HomePage'
 import StoriesDetailsPage from '../pages/StoriesDetailsPage/StoriesDetailsPage'
 import { CreateStoryPage } from '../pages/CreateStoryPage/CreateStoryPage'
+import { LandingPage } from '../pages/LandingPage/LandingPage'
 
 function Loading() {
   return (
@@ -36,7 +37,7 @@ const RouterContainer = styled.div`
 
 function AppRouter() {
   return (
-    <Router history={history}>
+    <Router>
       <Suspense fallback={<Loading />}>
         <AppHeader />
         <RouterContainer>
@@ -72,13 +73,8 @@ function AppRouter() {
             />
             <LogoutRoute exact path={RouteEnum.Logout} redirect={RouteEnum.Login} />
 
-            <PrivateRoute
-              path={RouteEnum.Main}
-              exact
-              component={HomePage}
-              redirect={RouteEnum.Login}
-              role={UserRoles.NARRATOR}
-            />
+            <PublicRoute path={RouteEnum.Main} exact component={LandingPage} redirect={RouteEnum.Main} />
+
             <Route component={NotFoundPage} />
           </Switch>
         </RouterContainer>
