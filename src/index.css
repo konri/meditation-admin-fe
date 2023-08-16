@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import '~react-datepicker/dist/react-datepicker.css';
+@import '~react-alice-carousel/lib/alice-carousel.css';
 
 body {
   margin: 0;

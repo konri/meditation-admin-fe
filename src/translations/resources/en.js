@@ -1,4 +1,20 @@
 export default {
+  LandingPage: {
+    hero: {
+      title: 'Zadbaj o siebie oraz swój umysł',
+      desc: 'Naucz się medytować, opanuj stres i lęki. Zyskaj wewnętrzny spokój i szczęście',
+      desc2: 'Zencast to aplikacja na telefon, którą możesz pobrać za darmo w swoim sklepie',
+    },
+    PeopleStory: {
+      title: 'Our team',
+    },
+    Testimonials: {
+      title: 'Our happy clients say about us',
+    },
+    Faq: {
+      title: 'Frequent asked questions',
+    },
+  },
   HomePage: {
     title: 'Home dashboard',
     menuList: {

@@ -52,7 +52,7 @@ export function AppHeader() {
   const dispatch = useDispatch()
   return (
     <StickyContainer className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
-      <Link to="/home">
+      <Link to="/">
         <LogoContainer>
           <img src={logo} alt="Logo Medystacja" width="350" height="150" />
           <img src={logoDarkMode} alt="Logo Medystacja" width="350" height="150" />

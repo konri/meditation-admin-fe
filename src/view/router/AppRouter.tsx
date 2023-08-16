@@ -1,5 +1,5 @@
 import { Dimmer, Loader } from 'semantic-ui-react'
-import { Route, HashRouter as Router, Switch } from 'react-router-dom'
+import { Route, Router, Switch } from 'react-router-dom'
 import React, { Suspense } from 'react'
 import LoginPage from '../pages/LoginPage/LoginPage'
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage'
@@ -37,7 +37,7 @@ const RouterContainer = styled.div`
 
 function AppRouter() {
   return (
-    <Router>
+    <Router history={history}>
       <Suspense fallback={<Loading />}>
         <AppHeader />
         <RouterContainer>
