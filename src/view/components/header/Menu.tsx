@@ -19,14 +19,14 @@ const MenuContainer = styled.div`
   }
 `
 const menuByRole = {
-  nonAuth: ['login'],
+  nonAuth: [''],
   auth: {
     [UserRoles.ADMIN]: ['dashboard'],
     [UserRoles.NARRATOR]: ['stories'],
     [UserRoles.USER]: [],
     always: ['logout'],
   },
-  always: ['home'],
+  always: [''],
 }
 
 export default function AppMenu() {
