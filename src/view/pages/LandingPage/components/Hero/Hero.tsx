@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 import './hero.css'
+import { LANG_LS } from '../../../../../translations'
 
 const HeroBackground = styled.div`
   position: relative;
@@ -25,55 +26,42 @@ const HeroBackground = styled.div`
   background-position: center;
 `
 
-//
-// const HeroBackground = styled.div`
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   overflow: hidden;
-//
-//   background-size: cover;
-//   color: #413D45;
-//   text-align: center;
-//   background-color: #FFE7D9;
-//   -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 2040 994" xmlns="http://www.w3.org/2000/svg"><path d="M2039.12 943.062C1516.62 943.062 1395.62 755.458 1002.38 755.458C694.375 755.458 374 993.24 0 993.24C0 828.271 0 496.96 0 496.96H2039.12C2039.12 496.96 2039.12 596.628 2039.12 943.062Z M2039.12 50.8967C1516.62 50.8967 1240.75 238.719 847.5 238.719C539.5 238.719 374 0.71875 0 0.71875C0 165.687 0 496.999 0 496.999H2039.12C2039.12 496.999 2039.12 397.33 2039.12 50.8967Z" /></svg>') center/contain no-repeat;
-//   mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 2040 994" xmlns="http://www.w3.org/2000/svg"><path d="M2039.12 943.062C1516.62 943.062 1395.62 755.458 1002.38 755.458C694.375 755.458 374 993.24 0 993.24C0 828.271 0 496.96 0 496.96H2039.12C2039.12 496.96 2039.12 596.628 2039.12 943.062Z M2039.12 50.8967C1516.62 50.8967 1240.75 238.719 847.5 238.719C539.5 238.719 374 0.71875 0 0.71875C0 165.687 0 496.999 0 496.999H2039.12C2039.12 496.999 2039.12 397.33 2039.12 50.8967Z" /></svg>') center/contain no-repeat;
-//   -webkit-mask-size: cover;
-//   mask-size: cover;
-//   width: 100%;
-//   -webkit-background-position: center;
-//   background-position: center;
-// `
+export const StoreButton = styled.img`
+  width: 350px;
+  height: 100px;
+  margin-bottom: 20px;
+`
 
 export const Hero = () => {
   const { t } = useTranslation()
-
+  const lng = localStorage.getItem(LANG_LS)
+  console.log('lng', lng)
   return (
     <HeroBackground>
       <img
         className="hero-image-mobile"
-        src="https://images.ctfassets.net/v3n26e09qg2r/4NqNkoUd0hvoIvsRJrm2bS/50490f004b2a68e044e305e25c0da38a/Hero_Mobile_Image.webp?w=1192&h=992&q=80&fm=webp"
+        src="/assets/hero_left.png"
         alt="Mobile Image"
         decoding="async"
         loading="lazy"
       />
       <div className="hero-images">
-        <img
-          className="hero-image-left"
-          src="https://images.ctfassets.net/v3n26e09qg2r/4D9CSEOzzm4zjCdPbmkFKE/927da3b4c128c841bb0abb4a16747f9e/Hero_Image_Left.webp?w=1052&h=1246&q=80&fm=webp"
-          alt="Left Image"
-          decoding="async"
-          loading="lazy"
-        />
+        <img className="hero-image-left" src="/assets/hero_left.png" alt="Left Image" decoding="async" loading="lazy" />
         <div className="hero-content">
           <h1 className="hero-title">{t('LandingPage.hero.title')}</h1>
           <p className="hero-description">{t('LandingPage.hero.desc')}</p>
-          <p className="hero-description">{t('LandingPage.hero.desc2')}</p>
+          <div className="store-logos">
+            <a href="">
+              <StoreButton src={`/assets/stores/${lng}/app_store.png`} />
+            </a>
+            <a href="">
+              <StoreButton src={`/assets/stores/${lng}/google_play.png`} />
+            </a>
+          </div>
         </div>
         <img
           className="hero-image-right"
-          src="https://images.ctfassets.net/v3n26e09qg2r/4D9CSEOzzm4zjCdPbmkFKE/927da3b4c128c841bb0abb4a16747f9e/Hero_Image_Left.webp?w=1052&h=1246&q=80&fm=webp"
+          src="/assets/hero_right.png"
           alt="Right Image"
           decoding="async"
           loading="lazy"

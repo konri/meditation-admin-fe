@@ -5,7 +5,7 @@ interface ContainerWithImage {
   leftImagePath?: string
   rightImagePath?: string
   mobileImagePath?: string
-  children: ReactNode
+  children?: ReactNode
 }
 
 const Image = styled.img`
@@ -23,10 +23,27 @@ const Image = styled.img`
   }
 `
 
+const Content = styled.div`
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  width: 40%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
+
+const Separator = styled.div`
+  height: 2px;
+  background-color: rgba(241, 240, 240, 0.9);
+  width: 80%;
+  margin: 15px 0 30px 0;
+`
+
 export function ContainerWithImage({ leftImagePath, rightImagePath, mobileImagePath, children }: ContainerWithImage) {
   return (
     <div
-      className="container d-flex flex-column flex-md-row align-items-center justify-content-md-between w-100 h-100"
+      className="container d-flex flex-column flex-md-row align-items-center justify-content-md-between w-100 h-100 mt-2 mb-5"
       data-testid="container-with-image"
     >
       <div className="mobile-image d-flex d-lg-none">
@@ -40,12 +57,15 @@ export function ContainerWithImage({ leftImagePath, rightImagePath, mobileImageP
         </div>
       )}
 
-      <div className="content">{children}</div>
+      <Content>{children}</Content>
       {rightImagePath && (
         <div className="image-right d-none d-md-block">
           <Image src={rightImagePath} alt="Right image" decoding="async" loading="lazy" />
         </div>
       )}
+      <div className="w-100 d-flex align-items-center justify-content-center d-lg-none">
+        <Separator />
+      </div>
     </div>
   )
 }

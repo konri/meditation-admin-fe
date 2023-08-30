@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Montserrat,sans-serif!important;
+    font-family: Nunito, Montserrat,sans-serif!important;
     transition: all 0.25s linear;
   }
 `
