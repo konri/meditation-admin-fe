@@ -19,23 +19,24 @@ const MenuContainer = styled.div`
   }
 `
 const menuByRole = {
-  nonAuth: [''],
+  nonAuth: [],
   auth: {
     [UserRoles.ADMIN]: ['dashboard'],
     [UserRoles.NARRATOR]: ['stories'],
     [UserRoles.USER]: [],
     always: ['logout'],
   },
-  always: [''],
+  always: [],
 }
 
 export default function AppMenu() {
   const user = useSelector((state: Store) => state.auth.user)
   const { t } = useTranslation()
   const buildMenu = useCallback((user: UserDetails | null) => {
-    const menuList = [...menuByRole.always]
+    const menuList: string[] = menuByRole.always
     if (user) {
-      menuList.push(...menuByRole.auth[user.role], ...menuByRole.auth.always)
+      const menu: string[] = menuByRole.auth[user.role] as string[]
+      menuList.push(...menu, ...menuByRole.auth.always)
     } else {
       menuList.push(...menuByRole.nonAuth)
     }

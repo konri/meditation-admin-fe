@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 import './hero.css'
 import { LANG_LS } from '../../../../../translations'
+import { APP_STORE, GOOGLE_PLAY } from '../../LandingPage'
 
 const HeroBackground = styled.div`
   position: relative;
@@ -51,10 +52,10 @@ export const Hero = () => {
           <h1 className="hero-title">{t('LandingPage.hero.title')}</h1>
           <p className="hero-description">{t('LandingPage.hero.desc')}</p>
           <div className="store-logos">
-            <a href="">
+            <a href={APP_STORE}>
               <StoreButton src={`/assets/stores/${lng}/app_store.png`} />
             </a>
-            <a href="">
+            <a href={GOOGLE_PLAY}>
               <StoreButton src={`/assets/stores/${lng}/google_play.png`} />
             </a>
           </div>

@@ -4,19 +4,23 @@ import { Hero, StoreButton } from './components/Hero/Hero'
 import { ContainerWithImage } from './components/ContainerWithImage/ContainerWithImage'
 import Testimonials from './components/Testimonial/Testimonial'
 import PeopleStory from './components/People/PeopleStory'
-import { FaqSection } from './components/FAQ/Faq'
-import { Subscriptions } from './components/Subscriptions/Subscriptions'
 import { Description, Header } from './style'
 import { LANG_LS } from '../../../translations'
 import { team } from './team'
 import { Rating } from './components/rating/rating'
 import { Lectors } from './components/Lectors/Lectors'
+import AudioIntroduction from './components/AudioIntroduction/AudioIntroductiion'
+import ZencastShow from './components/ZencastShow/ZencastShow'
+
+export const APP_STORE =
+  'https://apps.apple.com/pl/app/medystacja-medytacja-rozw%C3%B3j/id1628606900?l=pl&platform=iphone&fbclid=IwAR1xWhxFyn0iWYI1fSwcvwiOWwHatnVACdTJwTlnYgze58CTinYh9fnty34'
+export const GOOGLE_PLAY = 'https://play.google.com/store/apps/details?id=com.konradhopek.medystacja&pli=1'
 
 export const LandingPage = () => {
   const { t } = useTranslation()
-  const lng = localStorage.getItem(LANG_LS)
+  const lng = localStorage.getItem(LANG_LS) || 'pl'
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100">
+    <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100 whitespace-pre-line	">
       <Hero />
 
       <ContainerWithImage leftImagePath="/assets/feeling.png" mobileImagePath="/assets/feeling.png">
@@ -49,6 +53,8 @@ export const LandingPage = () => {
         <Description end>{t('LandingPage.descriptionSection.category.desc')}</Description>
       </ContainerWithImage>
 
+      <ZencastShow />
+
       <ContainerWithImage rightImagePath="/assets/images-in-phone.png" mobileImagePath="/assets/images-in-phone.png">
         <Header bold>{t('LandingPage.descriptionSection.why.title')}</Header>
         <Description>{t('LandingPage.descriptionSection.why.desc')}</Description>
@@ -68,25 +74,27 @@ export const LandingPage = () => {
           {t('LandingPage.descriptionSection.tryAndDownload.desc')}
         </Description>
         <div className="store-logos mt-2">
-          <a href="">
+          <a href={APP_STORE}>
             <StoreButton src={`/assets/stores/${lng}/app_store.png`} />
           </a>
-          <a href="">
+          <a href={GOOGLE_PLAY}>
             <StoreButton src={`/assets/stores/${lng}/google_play.png`} />
           </a>
         </div>
       </ContainerWithImage>
+
+      <AudioIntroduction />
 
       <Lectors />
 
       <div className="container d-flex flex-column align-items-center justify-content-md-between w-100 h-100 mt-2 mb-5">
         <Header bold>{t('LandingPage.descriptionSection.power.title')}</Header>
         <div className="flex flex-column flex-md-row justify-content-between">
-          <div className="w-50 pr-4">
+          <div className="md:w-50 md:pr-4">
             <Description>{t('LandingPage.descriptionSection.power.left1')}</Description>
             <Description>{t('LandingPage.descriptionSection.power.left2')}</Description>
           </div>
-          <div className="w-50 pl-4">
+          <div className="md:w-50 md:pl-4">
             <Description end>{t('LandingPage.descriptionSection.power.right1')}</Description>
             <Description end>{t('LandingPage.descriptionSection.power.right2')}</Description>
           </div>
@@ -100,17 +108,17 @@ export const LandingPage = () => {
         </Header>
 
         <div className="flex flex-column flex-md-row justify-content-between">
-          <div className="w-50 pr-4">
+          <div className="md:w-50 md:pr-4">
             <div className="flex-column justify-content-center align-items-center">
               <Rating rate={4.6} />
-              <a href="">
+              <a href={GOOGLE_PLAY}>
                 <StoreButton src={`/assets/stores/${lng}/google_play.png`} className="mt-4" />
               </a>
             </div>
           </div>
-          <div className="w-50 pl-4">
+          <div className="md:w-50 md:pl-4">
             <Rating rate={4.9} />
-            <a href="">
+            <a href={APP_STORE}>
               <StoreButton src={`/assets/stores/${lng}/app_store.png`} className="mt-4" />
             </a>
           </div>
@@ -130,10 +138,10 @@ export const LandingPage = () => {
           {t('LandingPage.descriptionSection.tryAndDownload.title')}
         </Header>
         <div className="store-logos mt-2">
-          <a href="">
+          <a href={APP_STORE}>
             <StoreButton src={`/assets/stores/${lng}/app_store.png`} />
           </a>
-          <a href="">
+          <a href={GOOGLE_PLAY}>
             <StoreButton src={`/assets/stores/${lng}/google_play.png`} />
           </a>
         </div>

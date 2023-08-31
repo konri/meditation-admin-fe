@@ -8,7 +8,7 @@ export const Header = styled.p<{ end?: boolean; center?: boolean; bold?: boolean
   text-align: ${(props) => (props.end ? 'end' : props.center ? 'center' : 'start')};
 
   @media (max-width: 768px) {
-    text-align: start;
+    text-align: center;
   }
 `
 

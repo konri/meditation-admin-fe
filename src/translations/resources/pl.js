@@ -6,7 +6,7 @@ export default {
     },
     descriptionSection: {
       feeling: {
-        title: 'Od razu poczuj się lepiej',
+        title: 'Od razu \n poczuj się lepiej',
         desc: 'dzięki spersonalizowanym medytacjom i ćwiczeniom oddechowym dostępnym na wyciągnięcie ręki.',
       },
       sleep: {
@@ -48,6 +48,16 @@ export default {
         title: 'Chcesz spróbować?',
         desc: 'Pobierz aplikację już teraz.',
       },
+      body_emotion: {
+        title: 'Zencast to Twoja ścieżka do harmonii\n' + 'Umysłu, Ciała i Emocji.',
+        desc:
+          'Odzyskaj spokój, \n' +
+          'poczuj więcej radości \n' +
+          'i oddychaj pełnią życia. \n\n' +
+          'Odkryj, jak regularność \n' +
+          'i świadomość przyniosą \n' +
+          'Ci równowagę i dobrostan. \n',
+      },
       power: {
         title: 'Odkryj moc medytacji, oddechu i Zencastów',
         left1:
@@ -57,9 +67,15 @@ export default {
           'Medytacja może prowadzić do głębszego zrozumienia siebie\n' +
           'i świata wokół ciebie, wpływając pozytywnie na zdrowie zarówno psychiczne, jak i fizyczne.',
         right1:
-          'Jak zacząć medytować? Nie potrzeba specjalnego sprzętu, doświadczeniaczy wyjątkowych umiejętności. Wystarczy nasza aplikacja Zencast.\n',
+          'Jak zacząć medytować? Nie potrzeba specjalnego sprzętu, doświadczenia czy wyjątkowych umiejętności. Wystarczy nasza aplikacja Zencast.\n',
         right2:
           'Wprowadź z nami pozytywne nawyki z Zencastów i zobacz jak kilka minut skupienia każdego dnia może otworzyć drogę do znalezienia upragnionego balansu w zgiełku codziennego życia.',
+      },
+      audioIntroduction: {
+        title: 'Rozpocznij swoją podróż\n' + 'z Zencast.',
+        pickUp: 'Zadbaj o siebie już teraz i wybierz krótkie ćwiczenie',
+        loading: 'Ładowanie...',
+        click: 'kliknij wybrane ćwiczenie powyżej\n' + 'i przejdź do nagrania',
       },
       rating: {
         title: 'Zencast zaczynało jako Medystacja.',
@@ -77,16 +93,7 @@ export default {
     },
     Team: {
       konrad_hopek: {
-        desc:
-          'Cześć tu Konrad, jestem inżynierem z wykształcenia oraz doświadczonym twórcą oprogramowania. Ukończone studia informatyczne stanowiły solidne fundamenty mojej kariery, która skupia się na tworzeniu innowacyjnych rozwiązań.\n' +
-          '\n' +
-          'Z moim kilkunastoletnim doświadczeniem w obszarze tworzenia oprogramowania komputerowego oraz kilkoma latami poświęconymi na rozwijanie aplikacji mobilnych, byłem w stanie stworzyć kilka udanych startupów. Moja pasja do technologii, elektroniki oraz programowania stała się głównym motorem napędzającym moje przedsięwzięcia.\n' +
-          '\n' +
-          'Jednak to, co szczególnie mnie inspiruje, to obszar well-beingu. W trakcie swojej kariery odkryłem, że technologia może odegrać kluczową rolę w poprawie jakości życia i samopoczucia. Moja przygoda z medytacją rozpoczęła się wiele lat temu, kiedy to zacząłem korzystać z anglojęzycznych aplikacji medytacyjnych. To doświadczenie zaowocowało marzeniem - marzeniem o stworzeniu platformy, która przynosiłaby dobrodziejstwa medytacji oraz well-beingu, ale dostępne byłaby w wielu językach, w tym także w tych mniej popularnych. Wierzę, że tak ważna kwestia jak zdrowie psychiczne i dobre samopoczucie powinna być dostępna dla każdego, niezależnie od języka, którym posługuje się użytkownik.\n' +
-          '\n' +
-          'To marzenie przerodziło się w rzeczywistość w postaci aplikacji Zencast. Przed powstaniem Zencast, istniała aplikacja o nazwie "Medystacja", skupiająca się na medytacji, ale brakowało mi w niej możliwości nauki czegoś nowego po osiągnięciu stanu wyciszenia. Dlatego postanowiłem stworzyć Zencast - platformę, która nie tylko pomaga w relaksacji i medytacji, ale także umożliwia zdobywanie nowej wiedzy. Dzięki Zencast możesz oczyścić umysł ze stresu i jednocześnie rozwijać się intelektualnie.\n' +
-          '\n' +
-          'Cieszę się, że mogę podzielić się tą historią oraz misją za Zencast. Dzięki naszej aplikacji chcemy wspierać Cię w osiągnięciu harmonii psychicznej i duchowej, a także w ciągłym rozwoju osobistym. Zapraszam Cię do odkrywania możliwości, jakie niesie ze sobą Zencast i dołączenia do naszej społeczności dbającej o dobre samopoczucie.',
+        desc: 'Inżynier z doświadczeniem w tworzeniu oprogramowania, zarówno aplikacji mobilnych i webowych. Studia informatyczne i wieloletnia praktyka zaowocowały kilkoma udanymi startupami w dziedzinie IT. Główna pasją jest technologia i programowanie, ale także obszar well-being. Zainspirowany korzyściami medytacji, stworzył pierw Medystacje a teraz Zencast - aplikację, która łączy relaksację i rozwijanie się intelektualne. Zencast promuje zdrowie psychiczne w różnych językach.',
         title: 'CEO i CTO, główny założyciel oraz programista aplikacji',
       },
 
@@ -110,6 +117,10 @@ export default {
   },
   rating: {
     out: 'z',
+  },
+  cookie: {
+    text: 'Ta strona korzysta z plików cookie w celu poprawy jakości Twojego doświadczenia podczas przeglądania. Pliki cookie to małe pliki tekstowe przechowywane na Twoim urządzeniu, które pomagają nam analizować ruch na stronie. Kontynuując korzystanie z naszej witryny, zgadzasz się na wykorzystanie plików cookie.',
+    btn: 'Zamknij',
   },
   HomePage: {
     title: 'Strona główna',

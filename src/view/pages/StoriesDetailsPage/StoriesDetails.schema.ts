@@ -13,7 +13,15 @@ export interface StoryWithMeditations {
   language: string
   isFree: boolean
   disable: boolean
+  user: {
+    name: string
+    narratorDetails: {
+      title: string
+      photoPath: string
+    }
+  }
   meditations: Array<{
+    path: string
     title: string
     duration: number
   }>
@@ -22,6 +30,7 @@ export interface StoryWithMeditations {
 export interface GetNarratorStories {
   getMyStories: { items: Array<StoryWithMeditations>; total: number }
 }
+
 export const GET_NARRATOR_STORIES = gql`
   query GetMyStories($pagination: CursorPagination) {
     getMyStories(pagination: $pagination) {

@@ -1,5 +1,6 @@
 import React from 'react'
 import CookieBanner from 'react-cookie-banner'
+import { useTranslation } from 'react-i18next'
 
 const styles = {
   banner: {
@@ -39,18 +40,18 @@ const styles = {
 }
 
 function CookiePopup() {
+  const { t } = useTranslation()
   const message =
-    "Medystacja uses cookies to guarantee users the employment of its site features, offering a better purchasing experience. By continuing to browse the site you're agreeing to our use of cookies."
+    'Zencast Ta strona korzysta z plików cookie w celu poprawy jakości Twojego doświadczenia podczas przeglądania. Pliki cookie to małe pliki tekstowe przechowywane na Twoim urządzeniu, które pomagają nam analizować ruch na stronie. Kontynuując korzystanie z naszej witryny, zgadzasz się na wykorzystanie plików cookie.'
 
   return (
     <div style={{ position: 'fixed', bottom: 0, zIndex: 1000 }}>
       <CookieBanner
         styles={styles}
-        message={message}
-        link={<a href="http://nocookielaw.com/">More information on our use of cookies</a>}
-        buttonMessage="Close"
+        message={t('cookie.text')}
+        buttonMessage={t('cookie.btn')}
         dismissOnScroll={false}
-        dismissOnClick={false}
+        dismissOnClick={true}
         onAccept={() => console.log('accept cookie')}
       />
     </div>

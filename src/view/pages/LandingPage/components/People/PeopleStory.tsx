@@ -73,7 +73,7 @@ export default function PeopleStory({ title, team }: PeopleStoryProps) {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-lg md:max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">{t(title)}</h2>
         </div>

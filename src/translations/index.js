@@ -3,8 +3,10 @@ import { initReactI18next } from 'react-i18next'
 import * as resources from './resources'
 
 export const LANG_LS = 'CURRENT_LANGUAGE'
-const lng = localStorage.getItem(LANG_LS) || 'en'
-
+const lng = localStorage.getItem(LANG_LS)
+if (lng == null) {
+  localStorage.setItem(LANG_LS, 'pl')
+}
 i18n.use(initReactI18next).init({
   resources: {
     ...Object.entries(resources).reduce(
@@ -17,7 +19,7 @@ i18n.use(initReactI18next).init({
       {}
     ),
   },
-  lng,
+  lng: lng || 'pl',
 })
 
 export default i18n
