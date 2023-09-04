@@ -44,7 +44,8 @@ const EasyAccessCenter = styled.div`
   flex-direction: column;
   align-items: start;
   padding-left: 16px;
-  max-width: 250px;
+  padding-right: 32px;
+  width: 300px;
 `
 
 const EasyAccessNext = styled.div`
@@ -75,6 +76,11 @@ const EasyAccessDesc = styled.span`
   width: auto;
   font-size: 14px;
   color: #3b5070;
+  max-width: 200px;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `
 
 export const IntroItem = ({ title, userName, userTitle, userPhoto, audioPath }: IntroZencastItem) => {
