@@ -13,7 +13,7 @@ interface IntroZencastItem {
 
 const NarratorItemContainer = styled.button`
   width: 100%;
-  height: 75px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,8 +35,6 @@ const Avatar = styled.img`
 
   border-top-left-radius: 32px;
   border-bottom-left-radius: 32px;
-  border-bottom-right-radius: 32px;
-  border-top-right-radius: 32px;
 `
 
 const EasyAccessCenter = styled.div`
@@ -64,6 +62,7 @@ const EasyAccessNext = styled.div`
 const NarratorItemIconWithText = styled.div`
   display: flex;
   flex-direction: row;
+  height: 100%;
 `
 
 const EasyAccessTitle = styled.span`

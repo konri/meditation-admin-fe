@@ -42,7 +42,7 @@ export const LandingPage = () => {
 
       <ContainerWithImage rightImagePath="/assets/people.png" mobileImagePath="/assets/people.png">
         <Header bold>{t('LandingPage.descriptionSection.people.title')}</Header>
-        <Description>{t('LandingPage.descriptionSection.people.desc')}</Description>
+        <Description mb>{t('LandingPage.descriptionSection.people.desc')}</Description>
         <Description>{t('LandingPage.descriptionSection.people.desc2')}</Description>
       </ContainerWithImage>
 
@@ -57,8 +57,8 @@ export const LandingPage = () => {
 
       <ContainerWithImage rightImagePath="/assets/images-in-phone.png" mobileImagePath="/assets/images-in-phone.png">
         <Header bold>{t('LandingPage.descriptionSection.why.title')}</Header>
-        <Description>{t('LandingPage.descriptionSection.why.desc')}</Description>
-        <Description>{t('LandingPage.descriptionSection.why.desc2')}</Description>
+        <Description mb>{t('LandingPage.descriptionSection.why.desc')}</Description>
+        <Description mb>{t('LandingPage.descriptionSection.why.desc2')}</Description>
         <Description>{t('LandingPage.descriptionSection.why.desc3')}</Description>
       </ContainerWithImage>
 
@@ -89,13 +89,15 @@ export const LandingPage = () => {
 
       <div className="container d-flex flex-column align-items-center justify-content-md-between w-100 h-100 mt-2 mb-5">
         <Header bold>{t('LandingPage.descriptionSection.power.title')}</Header>
-        <div className="flex flex-column flex-md-row justify-content-between">
-          <div className="md:w-50 md:pr-4">
-            <Description>{t('LandingPage.descriptionSection.power.left1')}</Description>
+        <div className="flex flex-column flex-md-row justify-content-between w-100">
+          <div className="md:w-1/2 md:pr-4 mb-4 md:mb-0">
+            <Description mb>{t('LandingPage.descriptionSection.power.left1')}</Description>
             <Description>{t('LandingPage.descriptionSection.power.left2')}</Description>
           </div>
-          <div className="md:w-50 md:pl-4">
-            <Description end>{t('LandingPage.descriptionSection.power.right1')}</Description>
+          <div className="md:w-1/2 md:pl-4">
+            <Description mb end>
+              {t('LandingPage.descriptionSection.power.right1')}
+            </Description>
             <Description end>{t('LandingPage.descriptionSection.power.right2')}</Description>
           </div>
         </div>

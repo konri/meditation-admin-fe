@@ -93,25 +93,48 @@ export function CreateStoryPage() {
       { key: 'SERIES_DAY_BY_DAY', value: 'SERIES_DAY_BY_DAY', text: t('createStoryPage.type.SERIES_DAY_BY_DAY') },
       { key: 'SERIES_SAME_TOPIC', value: 'SERIES_SAME_TOPIC', text: t('createStoryPage.type.SERIES_SAME_TOPIC') },
       { key: 'SERIES_TIME_LAPSE', value: 'SERIES_TIME_LAPSE', text: t('createStoryPage.type.SERIES_TIME_LAPSE') },
+      { key: 'INTRODUCTION', value: 'INTRODUCTION', text: t('createStoryPage.type.INTRODUCTION') },
+      { key: 'ZENCAST_SINGLE', value: 'ZENCAST_SINGLE', text: t('createStoryPage.type.ZENCAST_SINGLE') },
+      { key: 'ZENCAST_COURSE', value: 'ZENCAST_COURSE', text: t('createStoryPage.type.ZENCAST_COURSE') },
     ],
     [t]
   )
-
+  //
+  // const storyHashTagsOptions = useMemo(
+  //   () => [
+  //     { key: 'stress', value: 1, text: t('hashtags.stress') },
+  //     { key: 'sleep', value: 2, text: t('hashtags.sleep') },
+  //     { key: 'anxiety', value: 3, text: t('hashtags.anxiety') },
+  //     { key: 'focus', value: 4, text: t('hashtags.focus') },
+  //     { key: 'self-care', value: 5, text: t('hashtags.self-care') },
+  //     { key: 'beginers', value: 6, text: t('hashtags.beginers') },
+  //     { key: 'relax', value: 7, text: t('hashtags.relax') },
+  //     { key: 'work', value: 8, text: t('hashtags.work') },
+  //     { key: 'mother', value: 9, text: t('hashtags.mother') },
+  //     { key: 'development', value: 10, text: t('hashtags.development') },
+  //     { key: 'health', value: 11, text: t('hashtags.health') },
+  //     { key: 'kids', value: 13, text: t('hashtags.kids') },
+  //     { key: 'program', value: 14, text: t('hashtags.program') },
+  //     // { key: 'relationship', value: 12, text: t('hashtags.relationship') },
+  //     // { key: 'happiness', value: 14, text: t('hashtags.happiness') },
+  //   ],
+  //   [t]
+  // )
   const storyHashTagsOptions = useMemo(
     () => [
-      { key: 'stress', value: 1, text: t('hashtags.stress') },
+      { key: 'relax', value: 1, text: t('hashtags.relax') },
       { key: 'sleep', value: 2, text: t('hashtags.sleep') },
-      { key: 'anxiety', value: 3, text: t('hashtags.anxiety') },
-      { key: 'focus', value: 4, text: t('hashtags.focus') },
-      { key: 'self-care', value: 5, text: t('hashtags.self-care') },
-      { key: 'beginers', value: 6, text: t('hashtags.beginers') },
-      { key: 'relax', value: 7, text: t('hashtags.relax') },
-      { key: 'work', value: 8, text: t('hashtags.work') },
-      { key: 'mother', value: 9, text: t('hashtags.mother') },
-      { key: 'development', value: 10, text: t('hashtags.development') },
-      { key: 'health', value: 11, text: t('hashtags.health') },
-      { key: 'kids', value: 13, text: t('hashtags.kids') },
-      { key: 'program', value: 14, text: t('hashtags.program') },
+      { key: 'work', value: 3, text: t('hashtags.work') },
+      { key: 'parents', value: 4, text: t('hashtags.parents') },
+      { key: 'development', value: 5, text: t('hashtags.development') },
+      { key: 'breath', value: 6, text: t('hashtags.breath') },
+      // { key: 'relax', value: 7, text: t('hashtags.relax') },
+      // { key: 'work', value: 8, text: t('hashtags.work') },
+      // { key: 'mother', value: 9, text: t('hashtags.mother') },
+      // { key: 'development', value: 10, text: t('hashtags.development') },
+      // { key: 'health', value: 11, text: t('hashtags.health') },
+      // { key: 'kids', value: 13, text: t('hashtags.kids') },
+      // { key: 'program', value: 14, text: t('hashtags.program') },
       // { key: 'relationship', value: 12, text: t('hashtags.relationship') },
       // { key: 'happiness', value: 14, text: t('hashtags.happiness') },
     ],
@@ -261,6 +284,20 @@ export function CreateStoryPage() {
               <Form.Field>
                 <UploadFile accept="image/*" onSave={(path) => changeValue('photo', path)} />
                 {showError('photo') && (
+                  <Label basic color="red" pointing>
+                    {t('createStoryPage.error.photo')}
+                  </Label>
+                )}
+              </Form.Field>
+            </Segment>
+          </div>
+
+          <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-3">
+            <Segment padded className="m-0 w-100">
+              <Label attached="top">{t('createStoryPage.photoBackground')}</Label>
+              <Form.Field>
+                <UploadFile accept="image/*" onSave={(path) => changeValue('photoBackground', path)} />
+                {showError('photoBackground') && (
                   <Label basic color="red" pointing>
                     {t('createStoryPage.error.photo')}
                   </Label>

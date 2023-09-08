@@ -156,6 +156,7 @@ export const slice = createSlice({
           availableDate: new Date(),
           storyHashtagIds: [],
           photo: '',
+          photoBackground: '',
           meditations: [createInitialMeditation()],
         },
       }
@@ -185,6 +186,7 @@ export const slice = createSlice({
           availableDate: new Date(),
           storyHashtagIds: [],
           photo: '',
+          photoBackground: '',
           meditations: [createInitialMeditation()],
         },
       }

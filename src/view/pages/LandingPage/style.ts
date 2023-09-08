@@ -12,10 +12,11 @@ export const Header = styled.p<{ end?: boolean; center?: boolean; bold?: boolean
   }
 `
 
-export const Description = styled.p<{ end?: boolean; big?: boolean; center?: boolean }>`
+export const Description = styled.p<{ end?: boolean; big?: boolean; center?: boolean; mb?: boolean }>`
   font-size: ${(props) => (props.big ? 36 : 28)}px;
   line-height: ${(props) => (props.big ? 38 : 30)}px;
   text-align: ${(props) => (props.end ? 'end' : props.center ? 'center' : 'start')};
+  margin-bottom: ${(props) => (props.mb ? 32 : 0)}px;
   @media (max-width: 768px) {
     text-align: start;
   }

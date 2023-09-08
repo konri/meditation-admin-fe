@@ -25,7 +25,7 @@ export default function PeopleStory({ title, team }: PeopleStoryProps) {
   const items = team.map((item) => {
     return (
       <Story className="mt-40">
-        <div className="relative flex items-start border-2 border-gray-200 rounded bg-white">
+        <div className="relative flex items-start border-2 border-gray-200 rounded">
           <div className="text-center px-12 py-8 pt-20 mx-4 md:mx-0">
             <div className="absolute -top-20 -mt-8 left-1/2 transform -translate-x-1/2">
               <svg
@@ -49,7 +49,7 @@ export default function PeopleStory({ title, team }: PeopleStoryProps) {
     )
   })
 
-  const Carousel = <AliceCarousel autoWidth infinite mouseTracking items={items} />
+  const Carousel = <AliceCarousel autoWidth infinite paddingLeft={-10} paddingRight={-10} mouseTracking items={items} />
 
   return (
     <section className="relative">

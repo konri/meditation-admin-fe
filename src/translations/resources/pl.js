@@ -10,28 +10,28 @@ export default {
         desc: 'dzięki spersonalizowanym medytacjom i ćwiczeniom oddechowym dostępnym na wyciągnięcie ręki.',
       },
       sleep: {
-        title: 'Śpij zdrowiej i głębiej',
-        desc: 'wykonując ćwiczenia relaksacyjne przed snem i zasypiając przy relaksującym dźwięku morza czy lasu. ',
+        title: 'Śpij zdrowiej \n i głębiej',
+        desc: 'wykonując ćwiczenia relaksacyjne przed snem  i zasypiając \n  przy relaksującym dźwięku morza czy lasu. ',
       },
       teach: {
         title: 'Ucz się i rozwijaj',
-        desc: 'dzięki 7-dniowym kursom na tematy jak motywacja, stres czy spokój.',
+        desc: 'Dzięki różnorodnym kursom o motywacji, stresie i zarządzaniu własną energią!',
       },
       people: {
         title: 'Kilkudniowe kursy\n' + 'dobrego życia ',
         desc: 'Naszą misją jest pozytywny wpływ na dobrostan jak największej liczby osób.',
         desc2:
           'Pomagają nam w tym eksperci dzielący się wiedzą i zadaniami\n' +
-          'w formie Zencastów - kursów, dzięki którym opanujesz sztukę motywacji, rozwijania odporności psychicznej, koncentracji\n' +
+          'w formie Zencastów - kursów, dzięki którym opanujesz sztukę motywacji, rozwijania odporności psychicznej, koncentracji' +
           'w każdych warunkach i wiele więcej.',
       },
       category: {
         title: 'Stres? Brak motywacji? Problemy ze snem?',
         desc:
-          'Nasze medytacje i ćwiczenia odpowiadają na potrzeby codziennego życia i pracy. Niezależnie czy czujesz się nadmiernie zestresowany, \n' +
-          'szukasz sprawdzonych sposobów budowania dobrych nawyków\n' +
-          'czy po prostu zdenerwował cię klient - mamy dla Ciebie dziesiątki ćwiczeń\n' +
-          'i medytacji.\n' +
+          'Nasze medytacje i ćwiczenia odpowiadają na potrzeby codziennego życia i pracy. Niezależnie czy czujesz się nadmiernie zestresowany, ' +
+          'szukasz sprawdzonych sposobów budowania dobrych nawyków' +
+          'czy po prostu zdenerwował cię klient - mamy dla Ciebie dziesiątki ćwiczeń' +
+          'i medytacji.' +
           'I cały czas dodajemy kolejne.',
       },
       why: {
@@ -61,21 +61,21 @@ export default {
       power: {
         title: 'Odkryj moc medytacji, oddechu i Zencastów',
         left1:
-          'Medytacja to nie tylko praktyka duchowa, ale także narzędzie do osiągnięcia spokoju umysłu, poprawy koncentracji, \n' +
+          'Medytacja to nie tylko praktyka duchowa, ale także narzędzie do osiągnięcia spokoju umysłu, poprawy koncentracji, ' +
           'redukcji stresu i zwiększenia samoświadomości.',
         left2:
-          'Medytacja może prowadzić do głębszego zrozumienia siebie\n' +
+          'Medytacja może prowadzić do głębszego zrozumienia siebie' +
           'i świata wokół ciebie, wpływając pozytywnie na zdrowie zarówno psychiczne, jak i fizyczne.',
         right1:
-          'Jak zacząć medytować? Nie potrzeba specjalnego sprzętu, doświadczenia czy wyjątkowych umiejętności. Wystarczy nasza aplikacja Zencast.\n',
+          'Jak zacząć medytować? Nie potrzeba specjalnego sprzętu, doświadczenia czy wyjątkowych umiejętności. Wystarczy nasza aplikacja Zencast.',
         right2:
           'Wprowadź z nami pozytywne nawyki z Zencastów i zobacz jak kilka minut skupienia każdego dnia może otworzyć drogę do znalezienia upragnionego balansu w zgiełku codziennego życia.',
       },
       audioIntroduction: {
-        title: 'Rozpocznij swoją podróż\n' + 'z Zencast.',
+        title: 'Zatrzymaj się w chwili',
         pickUp: 'Zadbaj o siebie już teraz i wybierz krótkie ćwiczenie',
         loading: 'Ładowanie...',
-        click: 'kliknij wybrane ćwiczenie powyżej\n' + 'i przejdź do nagrania',
+        click: 'kliknij wybrane ćwiczenie powyżej\n' + 'i odsłuchaj nagranie',
       },
       rating: {
         title: 'Zencast zaczynało jako Medystacja.',
@@ -86,7 +86,7 @@ export default {
       title: 'Nasz zespół',
     },
     Testimonials: {
-      title: 'Nasi zadowoleni klienci o nas',
+      title: 'Dlaczego warto? \n Sprawdź opinie zadowolonych użytkowników',
     },
     Faq: {
       title: 'Często zadawane pytania',
@@ -178,13 +178,17 @@ export default {
       SERIES_DAY_BY_DAY: 'Seria medytacji',
       SERIES_SAME_TOPIC: 'Medytacje w tym samym temacie',
       SERIES_TIME_LAPSE: 'Medytacje z różnymi czasami trwania',
+      INTRODUCTION: 'Na główny ekran i stronę',
+      ZENCAST_SINGLE: 'Pojedyczny zencast',
+      ZENCAST_COURSE: 'kurs zencast',
     },
     language: 'Język',
     languagePlaceholder: 'Wybierz język historyjki...',
     isFree: 'Dostępne bez premium',
     availableDate: 'Data dostępności',
     hashtags: 'Etykiety',
-    photo: 'Zdjęcie w tle historyjki',
+    photo: 'Zdjęcie w miniaturce',
+    photoBackground: 'Zdjecie w tle historyjki',
     meditationsTitle: 'Stwórz medytacje',
     createMeditation: {
       title: 'Medytacja numer: {{sequence}}',
@@ -227,17 +231,18 @@ export default {
     SERIES_TIME_LAPSE: 'Seria z podziałem czasu',
   },
   hashtags: {
-    all: 'Wszystko',
+    relax: 'Spokój',
+    work: 'Praca',
+    parents: 'Dla rodzicow',
+    breath: 'oddech',
+    development: 'Rozwój',
     sleep: 'Sen',
     stress: 'Stres',
     focus: 'Skupienie',
     anxiety: 'Niepokój',
     beginers: 'Początkujący',
     'self-care': 'Troska o siebie',
-    relax: 'Relaks',
-    work: 'Praca',
     mother: 'Dla mam',
-    development: 'Rozwój',
     health: 'Zdrowie',
     relationship: 'Relacje',
     happiness: 'Szczęscie',

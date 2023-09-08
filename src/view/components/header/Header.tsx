@@ -42,7 +42,7 @@ const LogoContainer = styled.button`
     }
 
     &:nth-child(2) {
-      transform: ${({ theme }) => (theme.type === 'lightTheme' ? 'translateY(200px)' : 'translateY(-81px)')};
+      transform: ${({ theme }) => (theme.type === 'lightTheme' ? 'translateY(200px)' : 'translateY(-100px)')};
     }
   }
 `

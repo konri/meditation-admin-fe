@@ -27,7 +27,7 @@ const Content = styled.div`
   display: flex;
   padding: 16px;
   flex-direction: column;
-  width: 40%;
+  width: 45%;
   @media (max-width: 768px) {
     width: 100%;
   }

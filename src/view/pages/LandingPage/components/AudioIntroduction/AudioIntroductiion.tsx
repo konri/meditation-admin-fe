@@ -46,7 +46,7 @@ function AudioIntroduction() {
           </ItemsContainer>
         )}
       </div>
-      <Description>{t('LandingPage.descriptionSection.audioIntroduction.click')}</Description>
+      <Description center>{t('LandingPage.descriptionSection.audioIntroduction.click')}</Description>
     </div>
   )
 }
