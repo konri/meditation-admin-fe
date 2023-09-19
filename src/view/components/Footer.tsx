@@ -27,7 +27,8 @@ function Footer({ height }: FooterProps) {
   return (
     <FooterContainer height={height}>
       <FooterCopyright>
-        &copy; Copyright <strong>Zencast</strong>. All Rights Reserved
+        &copy; Copyright <strong>Zencast</strong>. All Rights Reserved <br />
+        Konrad Hopek Development
       </FooterCopyright>
     </FooterContainer>
   )

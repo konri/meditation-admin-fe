@@ -115,6 +115,12 @@ export default {
       title: 'Nasi Zencasterzy czyli lektorzy aplikacji:',
     },
   },
+  Statue: {
+    title: 'Regulamin aplikacji Zencast',
+  },
+  Privacy: {
+    title: 'Polityka Prywatności Aplikacji Zencast',
+  },
   rating: {
     out: 'z',
   },

@@ -1,5 +1,7 @@
 enum RouteEnum {
   Main = '',
+  Statue = '/statue',
+  Privacy = '/privacy',
   Home = '/home',
   Login = '/login',
   Logout = '/logout',
