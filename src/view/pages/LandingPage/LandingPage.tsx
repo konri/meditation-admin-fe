@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Hero, StoreButton } from './components/Hero/Hero'
 import { ContainerWithImage } from './components/ContainerWithImage/ContainerWithImage'
@@ -11,14 +11,29 @@ import { Rating } from './components/rating/rating'
 import { Lectors } from './components/Lectors/Lectors'
 import AudioIntroduction from './components/AudioIntroduction/AudioIntroductiion'
 import ZencastShow from './components/ZencastShow/ZencastShow'
+import { useHistory, useLocation } from 'react-router-dom'
+import RouteEnum from '../../router/RouteEnum'
 
 export const APP_STORE =
   'https://apps.apple.com/pl/app/medystacja-medytacja-rozw%C3%B3j/id1628606900?l=pl&platform=iphone&fbclid=IwAR1xWhxFyn0iWYI1fSwcvwiOWwHatnVACdTJwTlnYgze58CTinYh9fnty34'
 export const GOOGLE_PLAY = 'https://play.google.com/store/apps/details?id=com.konradhopek.medystacja&pli=1'
 
+function useQuery() {
+  return React.useMemo(() => new URLSearchParams(window.location.search), [window.location.search])
+}
+
 export const LandingPage = () => {
   const { t } = useTranslation()
   const lng = localStorage.getItem(LANG_LS) || 'pl'
+  const history = useHistory()
+  const location = useLocation()
+  const query = useQuery()
+  const paymentIntent = query.get('payment_intent')
+  const redirectStatus = query.get('redirect_status')
+
+  if (redirectStatus && paymentIntent) {
+    history.push(`${RouteEnum.ShopPaymentReturn}?paymentIntent=${paymentIntent}&redirectStatus=${redirectStatus}`)
+  }
   return (
     <div className="d-flex flex-column justify-content-center align-items-center w-100 h-100 whitespace-pre-line	">
       <Hero />

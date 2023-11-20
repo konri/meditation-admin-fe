@@ -1,0 +1,24 @@
+import axios from 'axios'
+import { APP_CONFIG } from '../../../../config'
+import { useEffect, useState } from 'react'
+import { VoucherCardItem } from '../shared/VoucherCardItem'
+
+export function useVoucherCards(lang: string) {
+  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState<Array<VoucherCardItem>>()
+  const [error, setError] = useState()
+
+  useEffect(() => {
+    axios
+      .get<Array<VoucherCardItem>>(`${APP_CONFIG.API}/voucherCard/${lang.toUpperCase()}`)
+      .then((res) => {
+        setData(res.data)
+        setLoading(false)
+      })
+      .catch((e) => {
+        setError(e)
+        setLoading(false)
+      })
+  }, [])
+  return { loading, data, error }
+}

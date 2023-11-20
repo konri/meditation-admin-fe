@@ -1,6 +1,8 @@
 export type StyleThemeType = {
   type: string
   body: string
+  voucherBody: string
+  voucherBodySelected: string
   headerBackground: string
   headerShadowColor: string
   menuText: string

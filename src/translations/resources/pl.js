@@ -1,3 +1,5 @@
+import { ShopPaymentReturnPage } from '../../view/pages/ShopPaymentReturnPage/ShopPaymentReturnPage'
+
 export default {
   LandingPage: {
     hero: {
@@ -121,6 +123,47 @@ export default {
   Privacy: {
     title: 'Polityka Prywatności Aplikacji Zencast',
   },
+  VoucherShop: {
+    title: 'Kup voucher premium do aplikacji Zencast',
+    vouchers: {
+      loading: `Ładowanie voucher'ów, proszę czekać...`,
+      mostPopular: 'Popularny',
+      family: 'Pakiet rodzina',
+      buyNow: 'Kup teraz',
+      quantity: {
+        cart: 'Koszyk',
+        product: 'Produkt',
+        price: 'Cena',
+        quantity: 'Ilość',
+        subtotal: 'Podsuma',
+        shipping: 'Dostawa',
+        Pshipping: 'Dostawa',
+        total: 'Kwota całkowita',
+        goToCheckout: 'Kontynuuj do płatności',
+      },
+      shopForm: {
+        finish: 'Dokończ swoją płatność',
+        userName: 'Imię i nazwisko',
+        userNamePlaceholder: 'Imię Nazwisko',
+        code: 'Prefiks do kodu vouchera',
+        codePlaceholder: 'np. nazwa firmy',
+        goToPayment: 'Przejdź do płatności',
+        loading: 'Proszę czekać...',
+        motto: 'Przeżyj coś niesamowitego z aplikacją Zencast...',
+        emailError: 'Niepoprawny e-mail, prosimy sprawdź jego poprawność',
+      },
+    },
+  },
+  ShopPayment: {
+    title: 'Strona płatności',
+    pay: 'Wykonaj płatność',
+  },
+  ShopPaymentReturnPage: {
+    title: 'Podsumowanie płatności',
+    succeeded:
+      'Twoja płatność została zaksiegowana, na podany e-mail przyjdzie Voucher do 24h, jeżeli po tym czasie się nie pojawi, prosimy skontaktować się z nami na adres: kontak@zencast.app',
+    failed: 'Niestety twoja płatność się nie udała, prosimy spróbować ponownie',
+  },
   rating: {
     out: 'z',
   },
@@ -147,6 +190,7 @@ export default {
     home: 'strona główna',
     dashboard: 'panel',
     stories: 'medytacje',
+    shop: 'Sklep subskrypcje',
     logout: 'wylogowanie',
   },
   language: {

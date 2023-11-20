@@ -7,12 +7,20 @@ import { LANG_LS } from '../../../translations'
 const LanguageSelector = () => {
   const { t } = useTranslation()
 
+  const isMobile = window.innerWidth < 768
   const setLanguage = useCallback((lang: string) => {
     i18next.changeLanguage(lang)
     localStorage.setItem(LANG_LS, lang)
   }, [])
   return (
-    <Dropdown text={t('language.title')} icon="world" floating labeled button className="icon">
+    <Dropdown
+      text={!isMobile ? t('language.title') : ''}
+      icon="world"
+      floating
+      labeled={!isMobile}
+      button
+      className="icon"
+    >
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => setLanguage('pl')}>{t('language.pl')}</Dropdown.Item>
         <Dropdown.Item onClick={() => setLanguage('en')}>{t('language.en')}</Dropdown.Item>

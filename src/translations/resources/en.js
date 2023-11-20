@@ -139,6 +139,7 @@ export default {
     home: 'home',
     dashboard: 'dashboard',
     stories: 'stories',
+    shop: 'Shop',
     logout: 'logout',
   },
   language: {

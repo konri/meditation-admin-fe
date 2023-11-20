@@ -1,6 +1,6 @@
 import { Menu } from 'semantic-ui-react'
 import NavButton from './NavButton'
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import styled from 'styled-components'
 import { UserRoles } from '../../../shared/model/UserRoles'
 import { useSelector } from 'react-redux'
@@ -19,12 +19,12 @@ const MenuContainer = styled.div`
   }
 `
 const menuByRole = {
-  nonAuth: [],
+  nonAuth: ['shop'],
   auth: {
     [UserRoles.ADMIN]: ['dashboard'],
     [UserRoles.NARRATOR]: ['stories'],
     [UserRoles.USER]: [],
-    always: ['logout'],
+    always: [],
   },
   always: [],
 }
@@ -32,7 +32,7 @@ const menuByRole = {
 export default function AppMenu() {
   const user = useSelector((state: Store) => state.auth.user)
   const { t } = useTranslation()
-  const buildMenu = useCallback((user: UserDetails | null) => {
+  const buildMenu = useMemo(() => {
     const menuList: string[] = menuByRole.always
     if (user) {
       const menu: string[] = menuByRole.auth[user.role] as string[]
@@ -40,13 +40,13 @@ export default function AppMenu() {
     } else {
       menuList.push(...menuByRole.nonAuth)
     }
-    return menuList.map((item: string) => <NavButton key={item} label={t(`menu.${item}`)} />)
+    return menuList.map((item: string) => <NavButton key={item} href={item} label={t(`menu.${item}`)} />)
   }, [])
 
   return (
     <MenuContainer>
       <Menu secondary className="pr-2">
-        {buildMenu(user)}
+        {buildMenu}
       </Menu>
     </MenuContainer>
   )

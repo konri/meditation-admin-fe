@@ -34,6 +34,7 @@ const LogoContainer = styled.button`
   overflow: hidden;
 
   img {
+    width: 350px;
     height: auto;
     transition: all 0.3s linear;
 
@@ -45,17 +46,28 @@ const LogoContainer = styled.button`
       transform: ${({ theme }) => (theme.type === 'lightTheme' ? 'translateY(200px)' : 'translateY(-100px)')};
     }
   }
+
+  @media screen and (max-width: 600px) {
+    height: 6rem;
+    align-items: center;
+    img {
+      width: 227px;
+      &:nth-child(2) {
+        transform: ${({ theme }) => (theme.type === 'lightTheme' ? 'translateY(200px)' : 'translateY(-62px)')};
+      }
+    }
+  }
 `
 
 export function AppHeader() {
   const checkedDarkMode = useSelector(useDarkMode)
   const dispatch = useDispatch()
   return (
-    <StickyContainer className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+    <StickyContainer className="d-flex flex-row justify-content-between align-items-center">
       <Link to="/">
         <LogoContainer>
-          <img src={logo} alt="Logo Medystacja" width="350" height="150" />
-          <img src={logoDarkMode} alt="Logo Medystacja" width="350" height="150" />
+          <img src={logo} alt="Logo Medystacja" />
+          <img src={logoDarkMode} alt="Logo Medystacja" />
         </LogoContainer>
       </Link>
       <div className="d-flex flex-row align-items-center pr-2 pr-lg-4">

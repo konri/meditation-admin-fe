@@ -19,6 +19,8 @@ import { CreateStoryPage } from '../pages/CreateStoryPage/CreateStoryPage'
 import { LandingPage } from '../pages/LandingPage/LandingPage'
 import { StatuePage } from '../pages/StatuePage/StatuePage'
 import { PrivacyPolicyPage } from '../pages/PrivacyPolicyPage/PrivacyPolicyPage'
+import { VoucherShopPage } from '../pages/VoucherShopPage/VoucherShopPage'
+import { ShopPaymentReturnPage } from '../pages/ShopPaymentReturnPage/ShopPaymentReturnPage'
 
 function Loading() {
   return (
@@ -76,6 +78,13 @@ function AppRouter() {
             <LogoutRoute exact path={RouteEnum.Logout} redirect={RouteEnum.Login} />
 
             <PublicRoute path={RouteEnum.Statue} exact component={StatuePage} redirect={RouteEnum.Main} />
+            <PublicRoute
+              path={RouteEnum.ShopPaymentReturn}
+              exact
+              component={ShopPaymentReturnPage}
+              redirect={RouteEnum.Main}
+            />
+            <PublicRoute path={RouteEnum.Shop} exact component={VoucherShopPage} redirect={RouteEnum.Main} />
             <PublicRoute path={RouteEnum.Privacy} exact component={PrivacyPolicyPage} redirect={RouteEnum.Main} />
             <PublicRoute path={RouteEnum.Main} exact component={LandingPage} redirect={RouteEnum.Main} />
 
